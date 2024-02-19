@@ -1,0 +1,125 @@
+/* || VARIABLES */
+
+:root {
+  --color-primary-green: hsl(75, 94%, 57%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 20%);
+  --color-neutral-dark-grey: hsl(0, 0%, 12%);
+  --color-neutral-off-black: hsl(0, 0%, 8%);
+}
+
+/* || RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* || GENERAL STYLES */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 2.4rem;
+  background-color: var(--color-neutral-off-black);
+  font-family: "Inter", sans-serif;
+}
+
+/* || CARD */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 4rem;
+  background-color: var(--color-neutral-dark-grey);
+  border-radius: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-neutral-white);
+  text-align: center;
+}
+
+.card__image {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-neutral-white);
+}
+
+.card__location {
+  font-weight: 700;
+  color: var(--color-primary-green);
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  list-style-type: none;
+}
+
+.card__item {
+  background-color: var(--color-neutral-grey);
+  border-radius: 0.8rem;
+}
+
+.card__link {
+  display: block;
+  padding: 1.2rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  color: var(--color-neutral-white);
+  text-decoration: none;
+}
+
+.card__link:hover {
+  background-color: var(--color-primary-green);
+  color: var(--color-neutral-grey);
+}
+
+/* || ATTRIBUTION */
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  background-color: var(--color-neutral-grey);
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  font-size: 11px;
+  color: var(--color-neutral-white);
+  text-align: center;
+}
+.attribution__link {
+  color: var(--color-primary-green);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    padding: 2.4rem;
+  }
+}
