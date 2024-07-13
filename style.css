@@ -1,0 +1,139 @@
+:root {
+  --clr-green: 75, 94%, 57%;
+
+  --clr-white: 0, 0%, 100%;
+  --clr-grey: 0, 0%, 20%;
+  --clr-dark-grey: 0, 0%, 12%;
+  --clr-off-black: 0, 0%, 8%;
+}
+
+::selection {
+  background-color: hsl(var(--clr-green));
+  color: hsl(var(--clr-off-black));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  background-color: hsl(var(--clr-off-black));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: hsl(var(--clr-white));
+  line-height: 1.5;
+  padding: 2.4rem;
+}
+
+.card {
+  background-color: hsl(var(--clr-dark-grey));
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+
+.card__image {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card__title {
+  color: hsl(var(--clr-green));
+}
+
+.card__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.card__link {
+  display: block;
+  padding: 1.2rem 0;
+  text-decoration: none;
+  color: hsl(var(--clr-white));
+  font-weight: 700;
+  background-color: hsl(var(--clr-grey));
+  border-radius: 0.8rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.card__link:hover {
+  color: hsl(var(--clr-grey));
+  background-color: hsl(var(--clr-green));
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution__link {
+  color: hsl(var(--clr-green));
+  text-decoration: none;
+}
+
+.attribution__link:hover {
+  text-decoration: underline;
+}
+
+/* ---- https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+/* ---- */
