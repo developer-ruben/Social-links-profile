@@ -87,7 +87,12 @@ body {
 }
 
 .card__title {
+  color: hsl(var(--clr-white));
+}
+
+.card__location {
   color: hsl(var(--clr-green));
+  font-weight: 700;
 }
 
 .card__list {
