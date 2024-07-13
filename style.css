@@ -1,3 +1,5 @@
+/* VARIABLES */
+
 :root {
   --clr-green: 75, 94%, 57%;
 
@@ -6,6 +8,8 @@
   --clr-dark-grey: 0, 0%, 12%;
   --clr-off-black: 0, 0%, 8%;
 }
+
+/* RESET */
 
 ::selection {
   background-color: hsl(var(--clr-green));
@@ -29,6 +33,8 @@ img {
   display: block;
 }
 
+/* GENERAL */
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
@@ -43,6 +49,20 @@ body {
   line-height: 1.5;
   padding: 2.4rem;
 }
+
+/* UTILITY */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* CARD */
 
 .card {
   background-color: hsl(var(--clr-dark-grey));
@@ -94,9 +114,18 @@ body {
   background-color: hsl(var(--clr-green));
 }
 
+/* ATTRIBUTION */
+
 .attribution {
   font-size: 11px;
   text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  background-color: hsl(var(--clr-dark-grey));
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
 }
 
 .attribution__link {
@@ -108,32 +137,10 @@ body {
   text-decoration: underline;
 }
 
-/* ---- https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+/* MEDIA QUERIES */
 
-.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important; /* 2 */
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important; /* 3 */
+@media only screen and (max-width: 425px) {
+  .attribution {
+    display: none;
+  }
 }
-
-.sr-only-focusable:focus,
-.sr-only-focusable:active {
-  clip: auto !important;
-  -webkit-clip-path: none !important;
-  clip-path: none !important;
-  height: auto !important;
-  margin: auto !important;
-  overflow: visible !important;
-  width: auto !important;
-  white-space: normal !important;
-}
-
-/* ---- */
