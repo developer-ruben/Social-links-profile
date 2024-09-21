@@ -108,7 +108,7 @@ main {
 }
 
 .profile-card__name {
-  font-family: var(--ff-bold);
+  font-family: var(--ff-semibold);
   font-size: 2.4rem;
   margin-bottom: 0.4rem;
 }
