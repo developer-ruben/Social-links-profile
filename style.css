@@ -118,6 +118,7 @@ main {
   font-weight: 600;
   font-size: var(--text-preset-1-size);
   line-height: var(--text-preset-1-height);
+  margin-bottom: 0.4rem;
 }
 
 .card__location {
