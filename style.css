@@ -30,7 +30,7 @@
   --clr-grey-800: 0, 0%, 12%;
   --clr-grey-900: 0, 0%, 8%;
 
-  --text-preset-1-size: 2.5rem;
+  --text-preset-1-size: 2.4rem;
   --text-preset-1-height: 1.5;
 
   --text-preset-2-size: 1.4rem;
@@ -148,8 +148,8 @@ main {
   width: 100%;
   color: hsl(var(--clr-white));
   font-weight: 700;
-  text-decoration: none;
   line-height: var(--text-preset-2-height);
+  text-decoration: none;
 }
 
 .card__link:hover {
