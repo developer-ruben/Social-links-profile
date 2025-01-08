@@ -149,6 +149,7 @@ main {
   color: hsl(var(--clr-white));
   font-weight: 700;
   text-decoration: none;
+  line-height: var(--text-preset-2-height);
 }
 
 .card__link:hover {
